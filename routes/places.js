@@ -15,22 +15,22 @@ router.get('/', (req, res) => {
         pic: 'http://placekitten.com/200/300'
     }
 ];
-    res.status(206).render('places/Index', { places });
+    res.status(206).render('places/index', { places });
 });
-router.post('', (req, res) => {
+router.post('/places', (req, res) => {
     res.status(206).send('Create a new place');
 });
 router.get('/new', (req, res) => {
-    res.status(206).send('Form page to add new place');
+    res.status(206).render('places/new');
 });
 router.get('/:id', (req, res) => {
-    res.status(206).send('Details about single place');
+    res.status(206).render('places/show');
 });
 router.put('/:id', (req, res) => {
     res.status(206).send('Update single place');
 });
 router.get('/:id/edit', (req, res) => {
-    res.status(206).send('page to edit single place');
+    res.status(206).render('places/edit');
 });
 router.delete('/:id', (req, res) => {
     res.status(206).send('delete stub page');
