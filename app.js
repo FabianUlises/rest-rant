@@ -3,13 +3,16 @@ const express = require('express');
 const app = express();
 
 
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
 app.use('/places', require('./routes/places'));
 
 
 
 
 app.get('/', (req, res) => {
-    res.status(206).send('Home route');
+    res.status(206).render('Home');
 });
 app.get('/places', (req, res) => {
     res.status(206).send('places index page');
