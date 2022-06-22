@@ -6,6 +6,7 @@ const Def = (html) => {
         <html>
             <head>
                 <title>Title</title>
+                <link rel="stylesheet" href="/main.css" />
             </head>
             <body>
                 {/* Start of nav */}
@@ -16,7 +17,7 @@ const Def = (html) => {
                         <div className="logo">logo</div>
                         {/* Nav links */}
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>

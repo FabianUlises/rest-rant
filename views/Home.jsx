@@ -6,7 +6,12 @@ const Home = () => {
     return(
         <Def>
             <main>
-                <h1>Home</h1>
+                <a href="/places"><h1>Rest-Rant</h1></a>
+                <div className="banner-img-container">
+                </div>
+                <a href="/places">
+                    <button className="btn-primary">Places Page</button>
+                </a>
             </main>
         </Def>
     )
