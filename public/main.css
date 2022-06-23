@@ -6,6 +6,28 @@
 }
 body {
     background-color: #79a9af;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+ul {
+    list-style-type: none;
+}
+/* Nav */
+.nav-primary {
+    padding: .8rem 1rem;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-primary_links {
+    display: flex;
+    gap: 1rem;
+}
+.nav-primary_links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-family: inherit;
 }
 /* Home page banner */
 .banner.img-container {

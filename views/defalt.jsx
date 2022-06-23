@@ -10,13 +10,13 @@ const Def = (html) => {
             </head>
             <body>
                 {/* Start of nav */}
-                <nav>
+                <nav className='nav-primary'>
                     {/* Nav container */}
                     <div className="nav-container">
                         {/* Nav logo */}
                         <div className="logo">logo</div>
                         {/* Nav links */}
-                        <ul>
+                        <ul className='nav-primary_links'>
                             <li><a href="/">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>
