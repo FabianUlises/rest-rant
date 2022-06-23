@@ -1,13 +1,14 @@
 const React = require('react');
 const Def = require('../defalt');
 
-const newPlace = () => {
-    return(
-        <Def>
-            <main>
-                <h3>Create form goes here</h3>
-            </main>
-        </Def>
-    )
+function new_form () {
+  return (
+      <Def>
+        <main>
+          <h1>Add a New Place</h1>
+        </main>
+      </Def>
+  )
 }
-module.exports = newPlace;
+
+module.exports = new_form
