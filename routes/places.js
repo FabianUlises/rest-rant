@@ -17,7 +17,8 @@ router.get('/', (req, res) => {
 ];
     res.status(206).render('places/index', { places });
 });
-router.post('/places', (req, res) => {
+router.post('/', (req, res) => {
+    console.log(req.body)
     res.status(206).send('Create a new place');
 });
 router.get('/new', (req, res) => {
