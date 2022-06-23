@@ -6,8 +6,16 @@
 body {
     background-color: #79a9af;
 }
-.banner-img-container {
+.banner.img-container {
     width: 100%;
-    height: 450px;
-    background: url('./images/banner.jpg');
+    height: 18vw;
+    min-height: 300px;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/banner.jpg')center center/cover no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner.img-container a{
+    color: whitesmoke;
+    font-size: 1.7rem;
 }

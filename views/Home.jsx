@@ -6,8 +6,8 @@ const Home = () => {
     return(
         <Def>
             <main>
-                <a href="/places"><h1>Rest-Rant</h1></a>
-                <div className="banner-img-container">
+                <div className="banner img-container">
+                    <a href="/places"><h1>Rest-Rant</h1></a>
                 </div>
                 <a href="/places">
                     <button className="btn-primary">Places Page</button>
