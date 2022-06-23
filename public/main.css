@@ -4,9 +4,15 @@
     padding: 0;
     box-sizing: inherit;
 }
+html, body {
+    height: 100%;
+}
 body {
     background-color: #79a9af;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.wrapper {
+    min-height: 100%;
 }
 ul {
     list-style-type: none;

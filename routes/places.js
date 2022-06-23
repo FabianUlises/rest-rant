@@ -21,9 +21,22 @@ router.post('/', (req, res) => {
 router.get('/new', (req, res) => {
     res.status(206).render('places/new');
 });
+
+
 router.get('/:id', (req, res) => {
-    res.status(206).render('places/show');
+    let id = Number(req.params.id)
+    console.log(id);
+    if(isNaN(id)) {
+        res.render('error404');
+    } else if (!places[id]){
+        res.render('error404');
+    } else {
+        res.status(206).render('places/show', { place: places[id] });
+    }
 });
+
+
+
 router.put('/:id', (req, res) => {
     res.status(206).send('Update single place');
 });
