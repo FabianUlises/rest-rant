@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
     } else if (!places[id]){
         res.render('error404');
     } else {
-        res.status(206).render('places/show', { place: places[id] });
+        res.status(206).render('places/show', { place: places[id], id });
     }
 });
 
@@ -44,7 +44,15 @@ router.get('/:id/edit', (req, res) => {
     res.status(206).render('places/edit');
 });
 router.delete('/:id', (req, res) => {
-    res.status(206).send('delete stub page');
+    let id = Number(req.params.id);
+    if(isNaN(id)) {
+        res.render('error404');
+    } else if (!places[id]) {
+        res.render('error404');
+    } else {
+        places.splice(id, 1)
+        res.status(206).redirect('/places'); 
+    }
 });
 router.post('/:id/rant', (req, res) => {
     res.status(206).send('create a review');
