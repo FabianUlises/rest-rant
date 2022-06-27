@@ -14,8 +14,6 @@ app.use(methodOverride('_method'));
 
 
 
-
-
 // Controllers and routes
 app.use('/places', require('./routes/places'));
 

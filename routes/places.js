@@ -1,130 +1,39 @@
-const router = require('express').Router();
-const places = require('../models/places');
+const router = require('express').Router()
 
 router.get('/', (req, res) => {
-    res.status(206).render('places/index', { places });
-});
-
-
-
-
-
-
-
+  res.send('GET /places stub')
+})
 
 router.post('/', (req, res) => {
-    if (!req.body.pic) {
-      // Default image if one is not provided
-      req.body.pic = 'http://placekitten.com/400/400'
-    }
-    if (!req.body.city) {
-      req.body.city = 'Anytown'
-    }
-    if (!req.body.state) {
-      req.body.state = 'USA'
-    }
-    places.push(req.body);
-    res.redirect('/places');
-  });
-
-
-
-
+  res.send('POST /places stub')
+})
 
 router.get('/new', (req, res) => {
-    res.status(206).render('places/new');
-});
-
-
-
-
+  res.render('places/new')
+})
 
 router.get('/:id', (req, res) => {
-    let id = Number(req.params.id)
-    console.log(id);
-    if(isNaN(id)) {
-        res.render('error404');
-    } else if (!places[id]){
-        res.render('error404');
-    } else {
-        res.status(206).render('places/show', { place: places[id], id });
-    }
-});
-
-
-
-
-router.get('/:id/edit', (req, res) => {
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
-        res.render('error404')
-    }
-    else if (!places[id]) {
-        res.render('error404')
-    }
-    else {
-      res.render('places/edit', { place: places[id], id })
-    }
-  })
-
-
+  res.send('GET /places/:id stub')
+})
 
 router.put('/:id', (req, res) => {
-    // res.send('editing');
-    // console.log(req.params.id)
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
-        res.render('error404')
-    }
-    else if (!places[id]) {
-        res.render('error404')
-    }
-    else {
-        if (!req.body.pic) {
-            // Default image if one is not provided
-            req.body.pic = 'http://placekitten.com/400/400'
-        }
-        if (!req.body.city) {
-            req.body.city = 'Anytown'
-        }
-        if (!req.body.state) {
-            req.body.state = 'USA'
-        }
-        places[id] = req.body
-        res.status(200).redirect(`/places/${id}`)
-    }
-  })
-
-
+  res.send('PUT /places/:id stub')
+})
 
 router.delete('/:id', (req, res) => {
-    let id = Number(req.params.id);
-    if(isNaN(id)) {
-        res.render('error404');
-    } else if (!places[id]) {
-        res.render('error404');
-    } else {
-        places.splice(id, 1)
-        res.status(206).redirect('/places'); 
-    }
-});
+  res.send('DELETE /places/:id stub')
+})
 
-
+router.get('/:id/edit', (req, res) => {
+  res.send('GET edit form stub')
+})
 
 router.post('/:id/rant', (req, res) => {
-    res.status(206).send('create a review');
-});
-
+  res.send('GET /places/:id/rant stub')
+})
 
 router.delete('/:id/rant/:rantId', (req, res) => {
-    res.status(206).send('delete a review');
-});
+    res.send('GET /places/:id/rant/:rantId stub')
+})
 
-
-
-
-
-
-
-
-module.exports = router;
+module.exports = router
