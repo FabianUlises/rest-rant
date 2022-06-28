@@ -1,11 +1,26 @@
 const router = require('express').Router()
+const db = require('../models')
 
 router.get('/', (req, res) => {
-  res.send('GET /places stub')
+    db.Place.find()
+        .then((places) => {
+            res.render('places/index', { places })
+        })
+        .catch(err => {
+            console.log(err)
+            res.render('error404')
+        })
 })
 
 router.post('/', (req, res) => {
-  res.send('POST /places stub')
+  db.Place.create(req.body)
+    .then(() => {
+        res.redirect('/places')
+    })
+    .catch(err => {
+        console.log('err', err)
+        res.render('error404')
+    })
 })
 
 router.get('/new', (req, res) => {
@@ -13,7 +28,14 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  res.send('GET /places/:id stub')
+  db.Place.findById(req.params.id)
+    .then((place) => {
+      res.render('places/show', { place })
+    })
+    .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+    })
 })
 
 router.put('/:id', (req, res) => {
