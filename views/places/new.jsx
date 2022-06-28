@@ -1,11 +1,18 @@
 const React = require('react');
 const Def = require('../defalt');
 
-function new_form () {
+function new_form (data) {
+  let message = '';
+  if(data.message) {
+    message = (
+      <h4 className='alert-danger'>{data.message}</h4>
+    )
+  }
   return (
       <Def>
         <main>
           <h1>Add a New Place</h1>
+          {message}
           <form method="POST" action="/places">
             <div className="form-group">
               <label htmlFor="name">Place Name</label>
@@ -13,11 +20,11 @@ function new_form () {
             </div>
             <div className="form-group">
               <label htmlFor="pic">Place Picture</label>
-              <input className="form-control" type="url" id="pic" name="pic" />
+              <input className="form-control" id="pic" name="pic" />
             </div>
             <div className="form-group">
               <label htmlFor="city">City</label>
-              <input className="form-control" type="text" id="city" name="city" />
+              <input className="form-control" id="city" name="city" />
             </div>
             <div className="form-group">
               <label htmlFor="state">State</label>
@@ -29,7 +36,7 @@ function new_form () {
             </div>
             <div className="form-group">
               <label htmlFor="founded">Founded Year</label>
-              <input className='form-control' id='founded' name='founded' />
+              <input type='number' className='form-control' id='founded' name='founded' value={new Date().getFullYear()}/>
             </div>
               <input className="formBtn" type="submit" value="Add Place" />
           </form>
