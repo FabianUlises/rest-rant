@@ -95,8 +95,8 @@ const show = (data) => {
                 </div>
 
                 <div className="place-btn-container">
-                    <a className='btn btn-warning' href={`/places/${data.id}/edit`}>Edit</a>
-                    <form method='POST' action={`/places/${data.id}?_method=DELETE`}>
+                    <a className='btn btn-warning' href={`/places/${data._id}/edit`}>Edit</a>
+                    <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
                         <button type='submit' className='btn btn-danger'>Delete</button>
                     </form>
                 </div>
