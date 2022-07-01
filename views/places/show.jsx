@@ -7,6 +7,24 @@ const show = (data) => {
             No comments yet!
         </h3>
     )
+    let rating = (
+      <h3 className='inactive'>
+        Not Yet rated
+      </h3>
+    )
+    if (data.place.comments.length) {
+      let sumRatings = data.place.comments.reduce((tot, c) => {
+        return tot + c.stars
+      }, 0)
+      let averageRating = sumRatings / data.place.comments.length
+      rating = (
+        <h3>
+          {Math.round(averageRating)} stars
+        </h3>
+      )
+    } 
+    
+
     if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
           return (
@@ -23,6 +41,13 @@ const show = (data) => {
       }
 
 
+
+
+
+
+
+      
+
     return(
         <Def>
             <main>
@@ -31,7 +56,9 @@ const show = (data) => {
                     <h3>Located in {data.place.city}, {data.place.state}</h3>
                 </div>
                 <div className="place-desc">
-                    <h3>{data.place.showEstablished()}</h3>
+                    <h1>{data.place.showEstablished()}</h1>
+                    <h2>Rating</h2>
+                    {rating}
                     <h4>Serving {data.place.cuisines}</h4>
                     <hr />
                     <h2>Comments</h2>
