@@ -99,8 +99,7 @@ router.get('/:id/edit', (req, res) => {
 
 
 router.post('/:id/comment', (req, res) => {
-  console.log(req.body)
-  // req.body.rant = req.body.rant ? true : false
+  req.body.rant = req.body.rant ? true : false
   // res.send('GET /places/:id/rant stub')
   db.Place.findById(req.params.id)
     .then(place => {

@@ -4,7 +4,16 @@ const Def = require('./../defalt');
 const edit_form = (data) => {
     return(
         <Def>
-            <main>
+            <div className="edit-banner">
+                <div className="banner-content">
+                    <a href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
+                    <input type="text" placeholder='(not an actual search bar!)'/>
+                    <a href="/places">
+                        <button className="btn-primary">Places Page</button>
+                    </a>
+                </div>
+            </div>
+            <main className='edit-place-container'>
                 <h1>Edit a Place</h1>
                 <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className="form-group">

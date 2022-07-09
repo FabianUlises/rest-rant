@@ -3,33 +3,20 @@ const React = require('react');
 const Def = (html) => {
     return(
         // Start of html layout
-        <html>
+        <html lang='en'>
             <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+                <meta name="description" content="A portfolio for Fabian Carrillo a Full-Stack Developer." />
                 <title>Title</title>
                 <link rel="stylesheet" href="/main.css" />
+                <script src="https://kit.fontawesome.com/bc3d8292c6.js" crossorigin="anonymous" defer></script>
             </head>
             <body>
-                <div className="wrapper">
-                    {/* Start of nav */}
-                    <nav className='nav-primary'>
-                        {/* Nav container */}
-                        <div className="nav-container">
-                            {/* Nav logo */}
-                            <div className="logo">logo</div>
-                            {/* Nav links */}
-                            <ul className='nav-primary_links'>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    {/* End of nav */}
+                <div>
                     {html.children}
                 </div>
-                <footer>
-                    <p>copyright</p>
-                </footer>
             </body>
         </html>
     )

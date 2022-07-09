@@ -40,7 +40,7 @@ const show = (data) => {
               </h3>
               <h4>Rating: {c.stars}</h4>
               <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-                <input type="submit" className="btn btn-danger" value="Delete Comment" />
+                <input type="submit" value="Delete Comment" className='form-btn'/>
               </form>
             </div>
           )
@@ -48,55 +48,92 @@ const show = (data) => {
       };
 
 
+
     return(
         <Def>
-            <main>
-                <div className="place-image">
-                    <img src={data.place.pic} alt={data.place.name} />
-                    <h3>Located in {data.place.city}, {data.place.state}</h3>
-                </div>
-                <div className="place-desc">
-                    <h1>{data.place.showEstablished()}</h1>
-                    <h2>Rating</h2>
-                    {rating}
-                    <h4>Serving {data.place.cuisines}</h4>
-                    <hr />
-                    <h2>Comments</h2>
-                    {comments}
-                    <hr />
-            <h2>Got Your Own Rant or Rave?</h2>
-            <form action={`/places/${data.place.id}/comment`} method="POST">
-              <div className="row">
-                <div className="form-group col-sm-12">
-                  <label htmlFor="content">Content</label>
-                  <textarea id="content" name="content" className="form-control"></textarea>
-                </div>
+          <div className="banner">
+          {/* Start of nav */}
+              <nav className='nav-primary'>
+              {/* Nav container */}
+                  <div className="nav-container">
+                  {/* Nav links */}
+                      <ul className='nav-primary_links'>
+                          <li><a href="#">Sign in</a></li>
+                          <li><a href="#" id='sign-up'>Sign up</a></li>
+                      </ul>   
+                  </div>
+              </nav>
+              {/* End of nav */}
+              <div className="banner-content">
+                  <a href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
+                  <input type="text" placeholder='(not an actual search bar!)'/>
+                  <a className="btn-primary" href="/places">Places</a>
               </div>
-              <div className="row">
-                <div className="form-group col-sm-4">
-                  <label htmlFor="author">Author</label>
-                  <input id="author" name="author" className="form-control" />
-                </div>
-                <div className="form-group col-sm-4">
-                  <label htmlFor="stars">Star Rating</label>
-                  <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
-                </div>
-                <div className="form-group col-sm-2">
-                  <label htmlFor="rant">Rant?</label>
-                  <input type="checkbox" id="rant" name="rant" className="form-control" />
-                </div>
+          </div>
+
+          <main className='place-show-container'>
+            <div className="place-rating-card">
+              <div className="rating-img">
+                <img src={data.place.pic} alt={data.place.name} />
               </div>
-              <input type="submit" className="btn btn-primary" value="Add Comment" />
-            </form>
-                </div>
+              <div className="rating-details">
+                <h3>Located in {data.place.city}, {data.place.state}</h3>
+                <h4>Serving {data.place.cuisines}</h4>
+              </div>
+            </div>
+            <div className="rating-section">
+              <div className="rating-info">
+                <h1>{data.place.showEstablished()}</h1>
+              </div>
+              <div className="rating-stars">
+                <h2>Rating</h2>
+                {rating}
+              </div>
+            </div>
+            <div className="comments-section">
+            <h2>Comments</h2>
+            <hr />
+              <div className="current-comments">
+                {comments}            
+              </div>
+              <hr />
+              <div className="comments-form">
+                <h2>Got Your Own Rant or Rave?</h2>
+                <div className="comment-form-container">
+                <form action={`/places/${data.place.id}/comment`} method="POST">
+                  <div className="row">
+                    <div className="form-group col-sm-12">
+                      <label htmlFor="content">Content</label>
+                      <textarea id="content" name="content" className="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="form-group col-sm-4">
+                      <label htmlFor="author">Author</label>
+                      <input id="author" name="author" className="form-control" />
+                    </div>
+                    <div className="form-group col-sm-4">
+                      <label htmlFor="stars">Star Rating</label>
+                      <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+                    </div>
+                    <div className="form-group col-sm-2"> 
+                      <label htmlFor="rant">Rant?</label>
+                      <input type="checkbox" id="rant" name="rant" className="form-control" />
+                    </div>
+                  </div>  
+                  <input type="submit" className="btn btn-primary" value="Add Comment" />
+                </form>
 
                 <div className="place-btn-container">
-                    <a className='btn btn-warning' href={`/places/${data.place.id}/edit`}>Edit</a>
-                    <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
-                        <button type='submit' className='btn btn-danger'>Delete</button>
-                    </form>
+                  <a className='form-btn' href={`/places/${data.place.id}/edit`}>Edit</a>
+                  <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
+                    <button type='submit' className='form-btn'>Delete</button>
+                  </form>
+                  </div>
+                  </div>
                 </div>
-            </main>
+              </div>
+          </main>
         </Def>
     )
 }
