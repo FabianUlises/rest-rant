@@ -26,7 +26,7 @@ const Home = () => {
                     {/* Header input */}
                     <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
                     {/* Hrader button */}
-                    {/* <a href="/places" className="banner-btn">Places Page</a> */}
+                    <a href="/places" className="banner-btn">Places Page</a>
                 </div>
                 {/* End of header content */}
             </header>
