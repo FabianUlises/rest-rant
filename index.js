@@ -16,6 +16,7 @@ app.use(methodOverride('_method'));
 app.get('/', (req, res) => {
     res.status(200).render('Home');
 });
+app.use('/places', require('./routes/places'));
 // Catch all error
 app.get('*', (req, res) => {    
     res.status(404).render('error404');
