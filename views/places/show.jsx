@@ -181,7 +181,7 @@ const show = (data) => {
                 {/* End of form group */}
                 </div>  
                 {/* Form button */}
-                <input type="submit" className="btn btn-primary" value="Add Comment" />
+                <input type="submit" className="form-btn" value="Add Comment" />
               </form>
               {/* End of form */}
               {/* Start of form buttons */}

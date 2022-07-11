@@ -9,6 +9,7 @@
 }
 .rating-img {
     max-width: 288px;
+    border-radius: 6px;
 }
 .place-container__card {
     display: flex;
@@ -20,15 +21,21 @@
     text-align: center;
     padding: 4rem 0;
     width: 100%;
-    background-color: cornsilk;
+    background-color: darkcyan;
 
+}
+.place-btn-container {
+    display: flex;
+    gap: 2rem;
 }
 .comments-section h2 {
     padding: 0 4rem;
 }
 .rating-details {
     padding: .8rem 0;
-
+}
+.rating-details h3 {
+    color: gray;
 }
 .rating-section {
     display: flex;
@@ -55,15 +62,19 @@
 .comment-form-container form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comment-form-container form input[type="submit"]{
+    background-color: whitesmoke;
+    color: black;
 }
 h2.comments-form-title {
     padding: 2rem;
 }
 .form-btn {
     background-color: whitesmoke;
-    color: black;
     padding: .4rem;
-    margin-bottom: .3rem;
     border: none;
 }
 @media screen and (max-width: 1110px){

@@ -3,51 +3,35 @@
     text-align: center;
     padding: 1rem;
     letter-spacing: 2px;
-
+}
+.places-content{
+    padding: 0 .8rem;
 }
 .places-container {
-    padding: 2rem 0 4rem 0;
+    width: 100%;
+    max-width: 1110px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
-    grid-gap: 2rem;
-    width: 100%;
-    max-width: 75%;
-    align-content: center;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    place-content: center;
+    gap: 2rem 1rem;
+    padding-bottom: 3rem;
 }
-.places-container .card a {
-    display: inline-block;
+.place-link {
+    display: block;
+    padding-bottom: 1.5rem;
 }
-.places-container .card {
-    box-shadow: 0px 2px 20px rgba(56, 55, 55, 0.466);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 250ms ease;
+.place__img {
+    margin-bottom: 1rem;
+    border-radius: 6px;
+
 }
-.places-container .card__img {
-    height: 12rem;
-    width: 100%;
-    object-fit: cover
+.place-link h3 {
+    margin-bottom: .5rem;
+    line-height: 1;
+
 }
-.card__title {
-    padding: .3rem;
-}
-.card__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    gap: 1rem;
-}
-.places-container .card:hover {
-    transform: scale(1.02);
-}
-.place-btn-container a{
-    margin-bottom: .8rem;
-    display: inline-block;
-    color: inherit;
-    color: red;
+.place-link p {
+    line-height: 1;
+    color: darkgray;
+    letter-spacing: 1px;
 }

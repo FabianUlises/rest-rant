@@ -15,13 +15,11 @@ app.use(methodOverride('_method'));
 app.use('/places', require('./routes/places'));
 // Root route / Home
 app.get('/', (req, res) => {
-    res.status(206).render('Home');
+    res.status(200).render('Home');
 });
 // Catch all error
 app.get('*', (req, res) => {    
     res.status(404).render('error404');
 });
 // Server on
-app.listen(process.env.PORT, () => {
-    console.log('I am awake!');
-});
+app.listen(process.env.PORT);

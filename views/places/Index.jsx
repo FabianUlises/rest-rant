@@ -8,20 +8,18 @@ const Index = (data) => {
         return(
             // A tag for click-able card
             // Start of card
-            <div className="card">
             <a href={`/places/${place.id}`} className="place-link">
                 {/* Card img */}
-                <img src={place.pic} alt={place.name} className="card__img"/>
+                <img src={place.pic} alt={place.name} className="place__img"/>
                 {/* Start of card content */}
-                <div className="card__content">
+                {/* <div className="place__content"> */}
                     {/* Card title */}
                     <h3 className='card__title'>{place.name}</h3>
                     <p className='card__desc'>{place.cuisines}</p>
                     <p className='card__desc'>Located in {place.city}, {place.state}</p>
-                </div>
+                {/* </div> */}
                 {/* Start of card content */}
             </a>
-            </div>
             // End of card
         )
     })
