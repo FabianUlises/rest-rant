@@ -8,9 +8,10 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 const db = require('./models')
-const getAllPlaces = async (req, res) => {
+
+const getAllPlaces = (req, res) => {
     db.Place.find()
-        .then((places) => {
+        .then(places => {
             res.render('places/index', { places });
         })
         .catch(err) {
@@ -96,7 +97,7 @@ app.get('/', (req, res) => {
     res.status(200).render('Home');
 });
 
-app.get('/places', getAllPlaces);
+// app.get('/places', getAllPlaces);
 // app.post('/places', addPlace);
 // app.get('/places/new', (req, res) => {
 //     res.render('places/new')
