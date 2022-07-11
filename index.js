@@ -8,7 +8,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
-app.use('/places', require('./routes/places_router'));
+// app.use('/places', require('./routes/places_router'));
 // Root route / Home
 app.get('/', (req, res) => {
     res.status(200).render('Home');
