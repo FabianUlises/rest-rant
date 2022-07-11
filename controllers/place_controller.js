@@ -21,7 +21,6 @@ exports.addPlace = async (req, res) => {
             message += `${el} was ${err.errors[el].value}`
             message += `${err.errors[el].message}`
             };
-            console.log('Validation error message', message)
             res.render('places/new', { message })
         } else {
             res.status(404).render('error404');
