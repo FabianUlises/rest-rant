@@ -90,9 +90,7 @@ const show = (data) => {
           {/* Header input */}
           <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
           {/* Hrader button */}
-          <a href="/places">
-            <button className="banner-btn">Places Page</button>
-          </a>
+          <a href="/places" className='banner-btn'>Places Page</a>
         </div>
         {/* End of header content */}
       </header>
@@ -131,8 +129,11 @@ const show = (data) => {
         </section>
         {/* End of rating section */}
 
-        {/* Start of comments section */}
-        <section className="comments-section">
+
+      </main>
+      {/* End of Show container */}
+              {/* Start of comments section */}
+              <section className="comments-section">
           <h2 className='comments-title'>Comments</h2>
           <hr />
           {/* Start of comment content */}
@@ -199,8 +200,6 @@ const show = (data) => {
           {/* End of form section */}
         </section>
         {/* End of comments section */}
-      </main>
-      {/* End of Show container */}
     </Def>
   )
 }

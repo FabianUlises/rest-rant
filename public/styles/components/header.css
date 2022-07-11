@@ -8,6 +8,9 @@
     align-items: center;
     color: whitesmoke;
 }
+#banner-h1 {
+    letter-spacing: 3px;
+}
 .banner nav {
     align-self: flex-end;
     font-weight: bold;
@@ -58,11 +61,13 @@
     border-radius: 8px;
     margin: 1.6rem 0;
     text-align: center;
+    border: 2px solid transparent;
 }
 .banner-content input:focus {
-    border: 1px solid lightblue;
+    border: 2px solid skyblue;
+    outline: none;
 }
-
+/* Banner for edit page */
 .edit-banner {
     width: 100%;
     height: 240px;

@@ -28,52 +28,52 @@ function new_form (data) {
         {/* End of header */}
         {/* Start of new place page */}
         <main className='add-place'>
-          {/* Title */}
-          <h1>Add a New Place</h1>
           {/* Display error message */}
           {message}
           {/* Start of form contianer */}
           <div className="add-place-form-container">
+            {/* Title */}
+            <h1 className='form-title'>Add a New Place</h1>
             {/* Start of form */}
             <form className='add-place-form' method="POST" action="/places">
               {/* Start o form group */}
               <div className="form-group">
-                <label htmlFor="name">Place Name</label>
+                <label class="details" htmlFor="name">Place Name</label>
                 <input className="place-form-input" type="text" id="name" name="name" required />
               </div>
               {/* End of form group */}
               {/* Start of form group */}
               <div className="form-group">
-                <label htmlFor="pic">Place Picture</label>
+                <label class="details" htmlFor="pic">Place Picture</label>
                 <input className="place-form-input" id="pic" name="pic" />
               </div>
               {/* End of form group */}
               {/* Start of form group */}
               <div className="form-group">
-                <label htmlFor="city">City</label>
+                <label class="details" htmlFor="city">City</label>
                 <input className="place-form-input" id="city" name="city" />
               </div>
               {/* End of form group */}
               {/* Start of form group */}
               <div className="form-group">
-                <label htmlFor="state">State</label>
+                <label class="details" htmlFor="state">State</label>
                 <input className="place-form-input" id="state" name="state" />
               </div>
               {/* End of form group */}
               {/* Start of form group */}
               <div className="form-group">
-                <label htmlFor="cuisines">Cuisines</label>
+                <label class="details" htmlFor="cuisines">Cuisines</label>
                 <input className="place-form-input" type="text" id="cuisines" name="cuisines" required />
               </div>
               {/* End of form group */}
               {/* Start of form group */}
               <div className="form-group">
-                <label htmlFor="founded">Founded Year</label>
+                <label class="details" htmlFor="founded">Founded Year</label>
                 <input type='number' className='place-form-input' id='founded' name='founded' value={new Date().getFullYear()}/>
               </div>
               {/* End of form group */}
               {/* Form button */}
-                <input className="formBtn" type="submit" value="Add Place" />
+                <input className="form-btn" type="submit" value="Add Place" />
             </form>
             {/* End of form */}
           </div>

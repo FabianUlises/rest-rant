@@ -7,22 +7,22 @@ const Index = (data) => {
         // Returning Jsx
         return(
             // A tag for click-able card
+            // Start of card
+            <div className="card">
             <a href={`/places/${place.id}`} className="place-link">
-                {/* Start of card */}
-                <div className='card'>
-                    {/* Card img */}
-                    <img src={place.pic} alt={place.name} />
-                    {/* Start of card content */}
-                    <div className="card-content">
-                        {/* Card title */}
-                        <h2> <a href={`/places/${place.id}`}>{place.name}</a></h2>
-                        <p>{place.cuisines}</p>
-                        <p>Located in {place.city}, {place.state}</p>
-                    </div>
-                    {/* Start of card content */}
+                {/* Card img */}
+                <img src={place.pic} alt={place.name} className="card__img"/>
+                {/* Start of card content */}
+                <div className="card__content">
+                    {/* Card title */}
+                    <h3 className='card__title'>{place.name}</h3>
+                    <p className='card__desc'>{place.cuisines}</p>
+                    <p className='card__desc'>Located in {place.city}, {place.state}</p>
                 </div>
-                {/* End of card */}
+                {/* Start of card content */}
             </a>
+            </div>
+            // End of card
         )
     })
     // Returning Jsx
