@@ -12,5 +12,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.status(200).render('Home');
 });
-
+app.get('/places', (req, res) => {
+    res.status(200).render('/places/Index')
+})
 app.listen(process.env.PORT);
