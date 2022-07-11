@@ -104,15 +104,26 @@ const deleteComment = (req, res) => {
       res.render('error404')
     })
 }
-router.get('/', getAllPlaces)
-router.post('/', addPlace)
+// router.get('/', getAllPlaces)
+// router.post('/', addPlace)
+// Root routes
+router.route('/')
+  .get(getAllPlaces)
+  .post(addPlace)
+// /new route
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
-router.get('/:id', getPlace)
-router.put('/:id', updatePlace)
-router.delete('/:id', deletePlace)
+// router.get('/:id', getPlace)
+// router.put('/:id', updatePlace)
+// router.delete('/:id', deletePlace)
+// /id routes
+router.route('/:id')
+  .get(getPlace)
+  .put(updatePlace)
+  .delete(deletePlace)
 router.get('/:id/edit', updatePlaceView)
+// Comments routes
 router.post('/:id/comment', addComment)
 router.delete('/:id/comment/:rantId', deleteComment)
 module.exports = router
