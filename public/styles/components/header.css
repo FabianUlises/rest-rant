@@ -1,7 +1,7 @@
 .banner {
     width: 100%;
     height: 580px;
-    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./../../images/banner.jpg')center center/cover no-repeat ;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./../../images/banner.jpg')center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .banner-content__link h1 {
-    font-size: 5rem;
+    font-size: 6rem;
 }
 .banner-content input {
     width: 100%;

@@ -1,5 +1,8 @@
+.home-page__header {
+    font-size: 5rem;
+}
 .home-page__desc {
-    color: whitesmoke;
+    color: darkcyan;
     padding: 2rem 0 0 1rem;
 }
 .desc{
