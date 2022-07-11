@@ -1,6 +1,7 @@
 const React = require('react');
-// Default Html layout with nav
+// Default Html layout
 const Def = (html) => {
+    // Returning Jsx
     return(
         // Start of html layout
         <html lang='en'>
@@ -14,9 +15,7 @@ const Def = (html) => {
                 <script src="https://kit.fontawesome.com/bc3d8292c6.js" crossorigin="anonymous" defer></script>
             </head>
             <body>
-                <div>
-                    {html.children}
-                </div>
+                {html.children}
             </body>
         </html>
     )

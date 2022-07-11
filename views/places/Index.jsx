@@ -2,49 +2,74 @@ const React = require('react');
 const Def = require('../defalt');
 
 const Index = (data) => {
+    // Mapping though each place in db
     let placesFotmatted = data.places.map((place) => {
+        // Returning Jsx
         return(
+            // A tag for click-able card
             <a href={`/places/${place.id}`} className="place-link">
+                {/* Start of card */}
                 <div className='card'>
-                
+                    {/* Card img */}
                     <img src={place.pic} alt={place.name} />
+                    {/* Start of card content */}
+                    <div className="card-content">
+                        {/* Card title */}
                         <h2> <a href={`/places/${place.id}`}>{place.name}</a></h2>
-                    <p>{place.cuisines}</p>
-                    <p>Located in {place.city}, {place.state}</p>
+                        <p>{place.cuisines}</p>
+                        <p>Located in {place.city}, {place.state}</p>
+                    </div>
+                    {/* Start of card content */}
                 </div>
+                {/* End of card */}
             </a>
         )
     })
+    // Returning Jsx
     return(
         <Def>
+            {/* Start of places page */}
             <main className='places-page'>
-                <div className="banner">
-                {/* Start of nav */}
-                    <nav className='nav-primary'>
-                    {/* Nav container */}
-                        <div className="nav-container">
-                        {/* Nav links */}
-                            <ul className='nav-primary_links'>
-                                <li><a href="#">Sign in</a></li>
-                                <li><a href="#" id='sign-up'>Sign up</a></li>
-                            </ul>   
+            {/* Start of header */}
+                <header className="banner">
+                    {/* Start of nav */}
+                    <nav className='nav-container'>
+                        {/* Nav container */}
+                        <div className="nav-primary">
+                            {/* Nav links */}
+                            <ul className='nav-primary__links'>
+                                <li className='nav-primary__link'><a>Sign in</a></li>
+                                <li className='nav-primary__link'><a id='sign-up'>Sign up</a></li>
+                            </ul>
                         </div>
                     </nav>
                     {/* End of nav */}
+                    {/* Start of header content */}
                     <div className="banner-content">
-                        <a href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
-                        <input type="text" placeholder='(not an actual search bar!)'/>
+                        {/* Header logo link */}
+                        <a className='banner-content__link' href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
+                        {/* Header input */}
+                        <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+                        {/* Hrader button */}
                         <a className="btn-primary" href="/places/new">Add a new Place</a>
                     </div>
-                </div>
+                    {/* End of header content */}
+                </header>
+                {/* End of Header */}
+                {/* Start of places content */}
                 <div className="places-content">
-                <h1 className='places-header'>Popular Places</h1>
-                <div className="places-container wrapper">
-                    {placesFotmatted}
-                </div>
-            </div> 
+                    {/* Places title */}
+                    <h1 className='places-header'>Popular Places</h1>
+                    {/* Start of places container */}
+                    <div className="places-container wrapper">
+                        {/* Displaying variable  */}
+                        {placesFotmatted}
+                    </div>
+                    {/* End of places container */}
+                </div> 
+                {/* End of places content */}
             </main>
-            
+            {/* End of places page */}
 
                 {/* <section className='content-more wrapper'>
                     <div className="user-card">

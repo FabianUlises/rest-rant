@@ -8,12 +8,12 @@ html, body {
     height: 100%;
 }
 html {
-    font-size: 100%;
+    font-size: 62.5%;
 }
 body {
     background-color: #79a9af;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 62.5%;
+    font-size: 1.6rem;
 }
 img {
     display: block;
@@ -50,7 +50,6 @@ ul {
 }
 .nav-primary_links a {
     text-decoration: none;
-    font-size: 1.2rem;
     color: whitesmoke;
     font-family: inherit;
 }
@@ -63,7 +62,6 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
     color: whitesmoke;
 }
 .banner nav {
@@ -87,15 +85,15 @@ ul {
 }
 .banner.img-container a{
     color: whitesmoke;
-    font-size: 1.7rem;
+
     text-decoration: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .banner-hl {
-    font-size: 1.7rem;
+
 }
 .banner-content input {
-    font-size: 1.2rem;
+
     padding: .4rem .8rem;
     border-radius: 8px;
     margin: .8rem 0;
@@ -108,7 +106,7 @@ ul {
     color: whitesmoke;
     border: none;
     padding: .8rem 1.2rem;
-    font-size: 1.3rem;
+
     border-radius: 8px;
 }
 .btn-primary:hover {
@@ -117,12 +115,12 @@ ul {
 .desc{
     color: whitesmoke;
     padding: 1.3rem;
-    font-size: 1.3rem;
+
 }
 .places-content h1{
     text-align: center;
     padding: 1rem;
-    font-size: 2rem;
+
 }
 .places-container {
     display: flex;
@@ -133,7 +131,7 @@ ul {
     padding-bottom: 4rem;
 }
 .places-container .card {
-    font-size: .7rem;
+
 }
 .place-link {
     display: inline-block;
@@ -161,21 +159,20 @@ ul {
     grid-column: 1/-1;
     text-align: center;
     padding: 1.6rem;
-    font-size: 1.1rem;
+
 }
 .comments-section h2 {
-    /* font-size: 1.3rem; */
     padding: .8rem;
 }
 .rating-details {
     padding: .8rem 0;
-    font-size: 1rem;
+
 }
 .rating-section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 1.1rem;
+
     text-align: center;
 }
 .current-comments {
@@ -225,7 +222,7 @@ ul {
 }
 @media screen and (max-width: 776px){
     .rating-section {
-        font-size: .9rem;
+
         margin: .8rem;
     }
 }
@@ -237,7 +234,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+
     color: whitesmoke;
     padding: 2rem 0;
 }
@@ -251,12 +248,10 @@ ul {
 .edit-place-container h1{
     padding: 1rem;
     text-align: center;
-    font-size: 2rem;
 }
 .edit-place-container form {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
     width: fit-content;
 }
 .edit-place-container .form-group {
@@ -283,7 +278,6 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
-    font-size: .9rem;
 }
 .form-group .form-control {
     width: 100%;

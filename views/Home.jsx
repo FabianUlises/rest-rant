@@ -1,37 +1,47 @@
 const React = require('react');
 const Def = require('./defalt');
-
-
 const Home = () => {
     return(
+        // Retuning jsx
         <Def>
-            <main>
-                <div className="banner">
-                    {/* Start of nav */}
-                    <nav className='nav-primary'>
-                        {/* Nav container */}
-                        <div className="nav-container">
-                            {/* Nav links */}
-                            <ul className='nav-primary_links'>
-                                <li><a>Sign in</a></li>
-                                <li><a id='sign-up'>Sign up</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    {/* End of nav */}
-                    <div className="banner-content">
-                        <a href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
-                        <input type="text" placeholder='(not an actual search bar!)'/>
-                        <a href="/places">
-                            <button className="btn-primary">Places Page</button>
-                        </a>
+            {/* Start of header */}
+            <header className="banner">
+                {/* Start of nav */}
+                <nav className='nav-container'>
+                    {/* Nav container */}
+                    <div className="nav-primary">
+                        {/* Nav links */}
+                        <ul className='nav-primary__links'>
+                            <li className='nav-primary__link'><a>Sign in</a></li>
+                            <li className='nav-primary__link'><a id='sign-up'>Sign up</a></li>
+                        </ul>
                     </div>
+                </nav>
+                {/* End of nav */}
+                {/* Start of header content */}
+                <div className="banner-content">
+                    {/* Header logo link */}
+                    <a className='banner-content__link' href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
+                    {/* Header input */}
+                    <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+                    {/* Hrader button */}
+                    <a href="/places">
+                        <button className="btn-primary">Places Page</button>
+                    </a>
                 </div>
-                <div className="desc">
-                    <h1>Welcome</h1>
-                    <p>This website was made using Nodejs, Expressjs, & MongoDB for back-end operations and React express JSX for server-side rendering</p>
+                {/* End of header content */}
+            </header>
+            {/* End of Header */}
+            {/* Start of home page */}
+            <main className='home-page'>
+                {/* Start of home page content */}
+                <div className="home-page__desc">
+                    <h1 className='home-page__header'>Welcome</h1>
+                    <p className='home-page__conent'>This website was made using Nodejs, Expressjs, & MongoDB for back-end operations and React express JSX for server-side rendering</p>
                 </div>
+                {/* End of home page content */}
             </main>
+            {/* End of home page */}
         </Def>
     )
 }
