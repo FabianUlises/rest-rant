@@ -11,7 +11,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
 // // Controllers and routes
-app.use('/places', require('/routes/places'));
+// app.use('/places', require('./routes/places'));
 // Root route / Home
 app.get('/', (req, res) => {
     res.status(200).render('Home');
