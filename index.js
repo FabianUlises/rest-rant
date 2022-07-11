@@ -1,4 +1,4 @@
-const db = require('../models');
+const db = require('./models');
 // Modules and Globals
 require('dotenv').config();
 const express = require('express');
