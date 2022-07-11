@@ -1,23 +1,20 @@
 const db = require('../models')
-exports.getAllPlaces = (req, res) => {
-    db.Place.find()
-    .then((places) => {
+exports.getAllPlaces = async (req, res) => {
+    try {
+        const places = await db.Place.find();
         res.render('places/index', { places })
-    })
-    .catch(err => {
-        console.log(err)
+    } catch (err) {
         res.render('error404')
-    })
-  }
-exports.addPlace = (req, res) => {
-    if(req.body.pic === '') {req.body.pic = undefined}
-    if(req.body.city === '') {req.body.city = undefined}
-    if(req.body.state === '') {req.body.state = undefined}
-    db.Place.create(req.body)
-        .then(() => {
+    }
+}
+exports.addPlace = async (req, res) => {
+    try {
+        if(req.body.pic === '') {req.body.pic = undefined}
+        if(req.body.city === '') {req.body.city = undefined}
+        if(req.body.state === '') {req.body.state = undefined}
+        await db.Place.create(req.body);
             res.redirect('/places')
-        })
-        .catch(err => {
+    } catch (err) {
         if(err && err.name == 'ValidationError') {
             let message = 'Validation Error'
             for(let el in err.errors) {
@@ -27,22 +24,17 @@ exports.addPlace = (req, res) => {
             console.log('Validation error message', message)
             res.render('places/new', { message })
         } else {
-            res.render('error404')        
+            res.render('error404')
         }
-
-        })
+    }
 }
-exports.getPlace = (req, res) => {
-    db.Place.findById(req.params.id)
-    .populate('comments')
-    .then((place) => {
-        console.log(place.comments)
+exports.getPlace = async (req, res) => {
+    try {
+        const place = await db.Place.findById(req.params.id).populate('comments')
         res.render('places/show', { place })
-    })
-    .catch(err => {
-        console.log('err', err)
+    } catch (err) {
         res.render('error404')
-    })
+    }
 }
 exports.updatePlace = (req, res) => {
     db.Place.findByIdAndUpdate(req.params.id, req.body)
