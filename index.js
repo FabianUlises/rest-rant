@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.status(200).render('Home');
 });
 app.get('/places', async (req, res) => {
-    res.render('hello')
+    res.send('hello')
     // try {
     //     const places = await db.Place.find();
     //     res.status(200).render('places/index', { places });
