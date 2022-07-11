@@ -9,12 +9,13 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 const db = require('./models')
 const getAllPlaces = async (req, res) => {
-    try {
-        const places = await db.Place.find();
-        res.status(200).render('places/index', { places });
-    } catch (err) {
-        res.status(404).render('error404');
-    }
+    db.Place.find()
+        .then((places) => {
+            res.render('places/index', { places });
+        })
+        .catch(err) {
+            console.log(err)
+        }
 };
 const addPlace = async (req, res) => {
     try {
@@ -96,14 +97,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/places', getAllPlaces);
-app.post('/places', addPlace);
-app.get('/places/new', (req, res) => {
-    res.render('places/new')
-});
-app.get('/places/:id', getPlace);
-app.get('/places/:id/edit', updatePlaceView);
-app.put('/places/:id', updatePlace);
-app.delete('/places/:id', deletePlace)
-app.post('/places/:id/comment', addComment);
-app.delete('/places/:id/comment/:rantId', deleteComment)
+// app.post('/places', addPlace);
+// app.get('/places/new', (req, res) => {
+//     res.render('places/new')
+// });
+// app.get('/places/:id', getPlace);
+// app.get('/places/:id/edit', updatePlaceView);
+// app.put('/places/:id', updatePlace);
+// app.delete('/places/:id', deletePlace)
+// app.post('/places/:id/comment', addComment);
+// app.delete('/places/:id/comment/:rantId', deleteComment)
 app.listen(process.env.PORT);
