@@ -38,8 +38,8 @@ const Index = (data) => {
                         <div className="nav-primary">
                             {/* Nav links */}
                             <ul className='nav-primary__links'>
-                                <li className='nav-primary__link'><a>Sign in</a></li>
-                                <li className='nav-primary__link'><a id='sign-up'>Sign up</a></li>
+                                <li className='nav-primary__link'><a href='#'>Sign in</a></li>
+                                <li className='nav-primary__link'><a href='#' id='sign-up'>Sign up</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -47,11 +47,12 @@ const Index = (data) => {
                     {/* Start of header content */}
                     <div className="banner-content">
                         {/* Header logo link */}
-                        <a className='banner-content__link' href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
+                        <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
+                        <span id='banner-hl' className=' block'> Rave or Rant!</span>
                         {/* Header input */}
                         <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
                         {/* Hrader button */}
-                        <a className="btn-primary" href="/places/new">Add a new Place</a>
+                        <a className="banner-btn" href="/places/new">Add a new Place</a>
                     </div>
                     {/* End of header content */}
                 </header>

@@ -1,0 +1,28 @@
+.edit-place-container {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edit-place-container h1{
+    padding: 1rem;
+    text-align: center;
+}
+.edit-place-container form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.edit-place-container .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+}
+.edit-place-container form input{
+    width: 100%;
+}
+.edit-place-container form input[type='submit']{
+    width: 75%;
+    margin: 0 auto;
+    padding: .3rem;
+}

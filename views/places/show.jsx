@@ -70,30 +70,31 @@ const show = (data) => {
     <Def>
       {/* Start of Header */}
       <header className="banner">
-          {/* Start of nav */}
-          <nav className='nav-container'>
-              {/* Nav container */}
-              <div className="nav-primary">
-                  {/* Nav links */}
-                  <ul className='nav-primary__links'>
-                      <li className='nav-primary__link'><a href='#'>Sign in</a></li>
-                      <li className='nav-primary__link'><a href='#' id='sign-up'>Sign up</a></li>
-                  </ul>
-              </div>
-          </nav>
-          {/* End of nav */}
-          {/* Start of header content */}
-          <div className="banner-content">
-              {/* Header logo link */}
-              <a className='banner-content__link' href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
-              {/* Header input */}
-              <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
-              {/* Hrader button */}
-              <a href="/places">
-                  <button className="btn-primary">Places Page</button>
-              </a>
+        {/* Start of nav */}
+        <nav className='nav-container'>
+          {/* Nav container */}
+          <div className="nav-primary">
+            {/* Nav links */}
+            <ul className='nav-primary__links'>
+              <li className='nav-primary__link'><a href='#'>Sign in</a></li>
+              <li className='nav-primary__link'><a href='#' id='sign-up'>Sign up</a></li>
+            </ul>
           </div>
-          {/* End of header content */}
+        </nav>
+        {/* End of nav */}
+        {/* Start of header content */}
+        <div className="banner-content">
+          {/* Header logo link */}
+          <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
+          <span id='banner-hl' className=' block'> Rave or Rant!</span>
+          {/* Header input */}
+          <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+          {/* Hrader button */}
+          <a href="/places">
+            <button className="banner-btn">Places Page</button>
+          </a>
+        </div>
+        {/* End of header content */}
       </header>
       {/* End of Header */}
 

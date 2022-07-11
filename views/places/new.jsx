@@ -15,14 +15,13 @@ function new_form (data) {
         <header className="edit-banner">
           {/* Start of header content */}
           <div className="banner-content">
-              {/* Header logo link */}
-              <a className='banner-content__link' href="/"><h1>Rest-Rant<span className='banner-hl block'> Rave or Rant!</span></h1></a>
-              {/* Header input */}
-              <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
-              {/* Hrader button */}
-              <a href="/places">
-                  <button className="btn-primary">Places Page</button>
-              </a>
+            {/* Header logo link */}
+            <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
+            <span id='banner-hl' className=' block'> Rave or Rant!</span>
+            {/* Header input */}
+            <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+            {/* Hrader button */}
+            <a className="banner-btn" href="/places">Places Page</a>
           </div>
           {/* End of header content */}
         </header>
