@@ -1,0 +1,7 @@
+@import url('./defaults.css');
+@import url('./components/header.css');
+@import url('./pages/edit_page.css');
+@import url('./pages/add_page.css');
+@import url('./pages/home_page.css');
+@import url('./pages/places_page.css');
+@import url('./pages/show_page.css')

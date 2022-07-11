@@ -1,0 +1,81 @@
+.banner {
+    width: 100%;
+    height: 580px;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./../../images/banner.jpg')center center/cover no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+#banner-h1 {
+    letter-spacing: 3px;
+}
+.banner nav {
+    align-self: flex-end;
+    font-weight: bold;
+}
+.nav-primary {
+    padding: .8rem 1rem;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+.nav-primary__links {
+    display: flex;
+    gap: 4rem;
+}
+.nav-primary_links a {
+    color: whitesmoke;
+    font-family: inherit;
+}
+#sign-up {
+    background-color: whitesmoke;
+    color: rgb(21, 16, 16);
+    padding: .3rem .8rem;
+    border-radius: 8px;
+}
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+.banner.img-container a{
+    color: whitesmoke;
+
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.banner-content__link h1 {
+    font-size: 5rem;
+}
+.banner-content input {
+    width: 100%;
+    padding: .4rem .8rem;
+    border-radius: 8px;
+    margin: 1.6rem 0;
+    text-align: center;
+    border: 2px solid transparent;
+}
+.banner-content input:focus {
+    border: 2px solid skyblue;
+    outline: none;
+}
+/* Banner for edit page */
+.edit-banner {
+    width: 100%;
+    height: 240px;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./../../images/banner.jpg')center center/cover no-repeat ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    padding: 2rem 0;
+}
