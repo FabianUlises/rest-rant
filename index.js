@@ -18,12 +18,13 @@ app.get('/', (req, res) => {
     res.status(200).render('Home');
 });
 app.get('/places', async (req, res) => {
-    try {
-        const places = await db.Place.find();
-        res.status(200).render('places/index', { places });
-    } catch (err) {
-        res.status(404).render('error404');
-    }
+    res.render('hello')
+    // try {
+    //     const places = await db.Place.find();
+    //     res.status(200).render('places/index', { places });
+    // } catch (err) {
+    //     res.status(404).render('error404');
+    // }
 })
 // Catch all error
 app.get('*', (req, res) => {    
