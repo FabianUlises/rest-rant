@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.get('/places', (req, res) => {
     // db.Place.find()
     //     .then((places) => {
-    res.render('places/index')
+    res.send('kslajdlsakjd')
         // })
         // .catch(err => {
         //     console.log(err)
