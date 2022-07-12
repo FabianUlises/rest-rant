@@ -1,28 +1,28 @@
 const React = require('react');
 const Def = require('../defalt');
 
-const Index = (data) => {
-    // Mapping though each place in db
-    let placesFotmatted = data.places.map((place) => {
-        // Returning Jsx
-        return(
-            // A tag for click-able card
-            // Start of card
-            <a href={`/places/${place.id}`} className="place-link">
-                {/* Card img */}
-                <img src={place.pic} alt={place.name} className="place__img"/>
-                {/* Start of card content */}
-                {/* <div className="place__content"> */}
-                    {/* Card title */}
-                    <h3 className='card__title'>{place.name}</h3>
-                    <p className='card__desc'>{place.cuisines}</p>
-                    <p className='card__desc'>Located in {place.city}, {place.state}</p>
-                {/* </div> */}
-                {/* Start of card content */}
-            </a>
-            // End of card
-        )
-    })
+const Index = () => {
+    // // Mapping though each place in db
+    // let placesFotmatted = data.places.map((place) => {
+    //     // Returning Jsx
+    //     return(
+    //         // A tag for click-able card
+    //         // Start of card
+    //         <a href={`/places/${place.id}`} className="place-link">
+    //             {/* Card img */}
+    //             <img src={place.pic} alt={place.name} className="place__img"/>
+    //             {/* Start of card content */}
+    //             {/* <div className="place__content"> */}
+    //                 {/* Card title */}
+    //                 <h3 className='card__title'>{place.name}</h3>
+    //                 <p className='card__desc'>{place.cuisines}</p>
+    //                 <p className='card__desc'>Located in {place.city}, {place.state}</p>
+    //             {/* </div> */}
+    //             {/* Start of card content */}
+    //         </a>
+    //         // End of card
+    //     )
+    // })
     // Returning Jsx
     return(
         <Def>
@@ -62,7 +62,7 @@ const Index = (data) => {
                     {/* Start of places container */}
                     <div className="places-container wrapper">
                         {/* Displaying variable  */}
-                        {placesFotmatted}
+                        {/* {placesFotmatted} */}
                     </div>
                     {/* End of places container */}
                 </div> 
