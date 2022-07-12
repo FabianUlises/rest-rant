@@ -17,14 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/places', (req, res) => {
-    // db.Place.find()
-    //     .then((places) => {
-    res.render('places/Index')
-        // })
-        // .catch(err => {
-        //     console.log(err)
-        //     res.render('error404')
-        // })
+    res.status(200).render('places/Index')
 })
 
 app.listen(process.env.PORT);
