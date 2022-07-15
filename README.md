@@ -3,6 +3,7 @@
 ## Add places to review and leave comments
 
 "/" Welcome page
+<br />
 "/places" Read places
 "/places" Create a place
 "/places/:id" Read a place
