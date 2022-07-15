@@ -11,6 +11,8 @@
 <br />
 "/places/:id" Read a place
 <br />
+"/places/:id/edit" View to Update a place
+<br />
 "/places/:id" Update a place
 <br />
 "/places/:id" Delete a place
