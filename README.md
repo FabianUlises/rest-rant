@@ -6,6 +6,7 @@
 <br />
 "/places" Read places
 <br />
+"/places/new" View to Create a place
 "/places" Create a place
 <br />
 "/places/:id" Read a place
@@ -14,6 +15,6 @@
 <br />
 "/places/:id" Delete a place
 <br />
-"/places/:id/" Create comment
+"/places/comment/:id/" Create comment
 <br />
-"/places/:id/:rantId" Delete comment
+"/places/:id/comment/:rantId" Delete comment
