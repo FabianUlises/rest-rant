@@ -12,14 +12,13 @@
 <h5>Here area a list of available routes</h5>
 <ul>
   <li>"/" GET - Home route</li>
-  <li>"/breads" GET - Get all breads</li>
-  <li>"/breads" POST - Create new bread</li>
-  <li>"/breads/new" GET - Form to create new bread</li>
-  <li>"/breads/:id" GET - Get bread by id</li>
-  <li>"/breads/:id" PUT - Update bread by id</li>
-  <li>"/breads/:id" DELETE - Delete bread by id</li>
-  <li>"/breads/:id/edit" GET - Form to update bread by id</li>
-  <li>"/bakers" GET - Get all bakers</li>
-  <li>"/bakers/:id" GET - Get baker by id</li>
-  <li>"/bakers/:id" DELETE - Delete baker by id</li>
+  <li>"/places" GET - Get all places</li>
+  <li>"/places" POST - Create new place</li>
+  <li>"/places/new" GET - Form to create new place</li>
+  <li>"/places/:id" GET - Get place by id</li>
+  <li>"/places/:id" PUT - Update place by id</li>
+  <li>"/places/:id" DELETE - Delete place by id</li>
+  <li>"/places/:id/edit" GET - Form to update place by id</li>
+  <li>"places/:id/comments" POST - Create new comment</li>
+  <li>"places/:id/comments/:rantId" DELETE - Delete comment by id</li>
 </ul>
