@@ -3,7 +3,7 @@ const db = require('../models');
 exports.getAllPlaces = async (req, res) => {
     try {
         const places = await db.Place.find();
-        res.status(200).render('places/index', { places });
+        res.status(200).render('./places/index', { places });
     } catch (err) {
         res.status(404).render('error404');
     }
@@ -22,7 +22,7 @@ exports.addPlace = async (req, res) => {
             message += `${el} was ${err.errors[el].value}`
             message += `${err.errors[el].message}`
             };
-            res.render('places/new', { message })
+            res.status(200).render('places/new', { message })
         } else {
             res.status(404).render('error404');
         }
