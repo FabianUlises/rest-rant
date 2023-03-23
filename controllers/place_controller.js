@@ -3,7 +3,7 @@ const db = require('../models');
 exports.getAllPlaces = async (req, res) => {
     try {
         const places = await db.Place.find();
-        res.status(200).render('./places/index', { places });
+        res.status(200).render('places/Index', { places });
     } catch (err) {
         res.status(404).render('error404');
     }
