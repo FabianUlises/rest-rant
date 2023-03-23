@@ -14,9 +14,9 @@ app.use(methodOverride('_method'));
 // Controllers and routes
 app.use('/places', require('./routes/places'));
 // Root route / Home
-// app.get('/', (req, res) => {
-//     res.status(200).render('Home');
-// });
+app.get('/', (req, res) => {
+    res.status(200).render('Home');
+});
 // Catch all error
 app.get('*', (req, res) => {    
     res.status(404).render('error404');

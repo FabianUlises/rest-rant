@@ -1,4 +1,5 @@
 const db = require('../models');
+
 exports.getAllPlaces = async (req, res) => {
     try {
         const places = await db.Place.find();
