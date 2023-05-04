@@ -22,4 +22,6 @@ app.get('*', (req, res) => {
     res.status(404).render('error404');
 });
 // Server on
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => {
+    console.log('Server on');
+});
