@@ -10,6 +10,7 @@
   <li>mongodb</li>
   <li>mongoose</li>
 </ul>
+<p>This app was made for learning purposes only. It is built off nodejs & expressjs for server using git for version control. Mongodb w/ mongoose for database & express-react-views for server-side rendering. App is using form validation on the models. The two models are sharing a one-to-many relationship with the places having multiple comments.</p>
 <h5>Here area a list of available routes</h5>
 <ul>
   <li>"/" GET - Home route</li>
