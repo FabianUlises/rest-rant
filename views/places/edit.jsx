@@ -3,7 +3,7 @@ const Def = require('./../defalt');
 
 const edit_form = (data) => {
     // Returning Jsx
-    return(
+    return (
         <Def>
             {/* Start of header */}
             <header className="edit-banner">
@@ -13,11 +13,11 @@ const edit_form = (data) => {
                     <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
                     <span id='banner-hl' className=' block'> Rave or Rant!</span>
                     {/* Header input */}
-                    <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+                    <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)' />
                     {/* Hrader button */}
                     <a href="/places" className="banner-btn">Places Page</a>
                 </div>
-            {/* End of header content */}
+                {/* End of header content */}
             </header>
             {/* End of header */}
             {/* Start of edit place  */}
@@ -76,7 +76,7 @@ const edit_form = (data) => {
                             <input className="place-form-input" type="text" id="cuisines" name="cuisines" required />
                         </div>
                         {/* End of form group */}
-                            <input className="form-btn" type="submit" value="Update Place" />
+                        <input className="form-btn" type="submit" value="Update Place" />
                     </form>
                     {/* End of edit place form */}
                 </div>
@@ -84,7 +84,7 @@ const edit_form = (data) => {
             </main>
             {/* End of edit place  */}
         </Def>
-    )
-}
+    );
+};
 
 module.exports = edit_form;

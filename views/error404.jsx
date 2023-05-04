@@ -3,7 +3,7 @@ const Def = require('./defalt');
 
 const error404 = () => {
     // Returning Jsx
-    return(        
+    return (
         <Def>
             {/* Start of error page */}
             <main className='error-page'>
@@ -11,6 +11,6 @@ const error404 = () => {
             </main>
             {/* End of error page */}
         </Def>
-    )
+    );
 };
 module.exports = error404;

@@ -5,30 +5,30 @@ const Index = (data) => {
     // Mapping though each place in db
     let placesFotmatted = data.places.map((place) => {
         // Returning Jsx
-        return(
+        return (
             // A tag for click-able card
             // Start of card
             <a href={`/places/${place.id}`} className="place-link">
                 {/* Card img */}
-                <img src={place.pic} alt={place.name} className="place__img"/>
+                <img src={place.pic} alt={place.name} className="place__img" />
                 {/* Start of card content */}
                 {/* <div className="place__content"> */}
-                    {/* Card title */}
-                    <h3 className='card__title'>{place.name}</h3>
-                    <p className='card__desc'>{place.cuisines}</p>
-                    <p className='card__desc'>Located in {place.city}, {place.state}</p>
+                {/* Card title */}
+                <h3 className='card__title'>{place.name}</h3>
+                <p className='card__desc'>{place.cuisines}</p>
+                <p className='card__desc'>Located in {place.city}, {place.state}</p>
                 {/* </div> */}
                 {/* Start of card content */}
             </a>
             // End of card
-        )
-    })
+        );
+    });
     // Returning Jsx
-    return(
+    return (
         <Def>
             {/* Start of places page */}
             <main className='places-page'>
-            {/* Start of header */}
+                {/* Start of header */}
                 <header className="banner">
                     {/* Start of nav */}
                     <nav className='nav-container'>
@@ -48,7 +48,7 @@ const Index = (data) => {
                         <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
                         <span id='banner-hl' className=' block'> Rave or Rant!</span>
                         {/* Header input */}
-                        <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+                        <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)' />
                         {/* Hrader button */}
                         <a className="banner-btn" href="/places/new">Add a new Place</a>
                     </div>
@@ -65,12 +65,12 @@ const Index = (data) => {
                         {placesFotmatted}
                     </div>
                     {/* End of places container */}
-                </div> 
+                </div>
                 {/* End of places content */}
             </main>
             {/* End of places page */}
 
-                {/* <section className='content-more wrapper'>
+            {/* <section className='content-more wrapper'>
                     <div className="user-card">
                         <div className="user-card-img" id='join-img'></div>
                         <div className="user-card-desc">
@@ -97,6 +97,6 @@ const Index = (data) => {
                     </div>
                 </section> */}
         </Def>
-    )
-}
+    );
+};
 module.exports = Index;

@@ -1,7 +1,7 @@
 const React = require('react');
 const Def = require('./defalt');
 const Home = () => {
-    return(
+    return (
         // Retuning jsx
         <Def>
             {/* Start of header */}
@@ -24,7 +24,7 @@ const Home = () => {
                     <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
                     <span id='banner-hl' className=' block'> Rave or Rant!</span>
                     {/* Header input */}
-                    <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+                    <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)' />
                     {/* Hrader button */}
                     <a href="/places" className="banner-btn">Places Page</a>
                 </div>
@@ -42,7 +42,7 @@ const Home = () => {
             </main>
             {/* End of home page */}
         </Def>
-    )
-}
+    );
+};
 
 module.exports = Home;

@@ -5,9 +5,9 @@ const Def = require('./../defalt');
 const show = (data) => {
   // Default comments content
   let comments = (
-      <h3 className="inactive">
-          No comments yet!
-      </h3>
+    <h3 className="inactive">
+      No comments yet!
+    </h3>
   );
   // Default rating content
   let rating = (
@@ -18,19 +18,19 @@ const show = (data) => {
   // Checking if data's comments isnt empty
   // If it isn't continue
   if (data.place.comments.length) {
-  // Ratings
+    // Ratings
     // Calculating sum of ratings
     let sumRatings = data.place.comments.reduce((tot, c) => {
-      return tot + c.stars
-    }, 0)
+      return tot + c.stars;
+    }, 0);
     // Removing decimal
-    let averageRating = Math.round(sumRatings / data.place.comments.length)
+    let averageRating = Math.round(sumRatings / data.place.comments.length);
     // Default Stars content
     let stars = '';
     // Looping for every star in averagerating
-    for(let i = 0; i < averageRating; i++) {
+    for (let i = 0; i < averageRating; i++) {
       // Adding a star as content
-      stars +='⭐️';
+      stars += '⭐️';
     };
     // If there is comments the ratings variable will update its content
     rating = (
@@ -38,8 +38,8 @@ const show = (data) => {
         {/* Will render stars */}
         {stars} stars
       </h3>
-    )
-  // Comments
+    );
+    // Comments
     // Looping through the comments
     comments = data.place.comments.map(c => {
       // Returning Jsx
@@ -56,16 +56,16 @@ const show = (data) => {
           {/* End of comment content */}
           {/* Start of comment button */}
           <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
-            <input type="submit" value="Delete Comment" className='form-btn'/>
+            <input type="submit" value="Delete Comment" className='form-btn' />
           </form>
           {/* End of comment button */}
         </div>
         // End of comments
-      )
-    })
+      );
+    });
   };
   // 
-  return(
+  return (
     // Returning Jsx
     <Def>
       {/* Start of Header */}
@@ -88,7 +88,7 @@ const show = (data) => {
           <a className='banner-content__link' href="/"><h1>Rest-Rant</h1></a>
           <span id='banner-hl' className=' block'> Rave or Rant!</span>
           {/* Header input */}
-          <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)'/>
+          <input className='banner-content__input' type="text" placeholder='(not an actual search bar!)' />
           {/* Hrader button */}
           <a href="/places" className='banner-btn'>Places Page</a>
         </div>
@@ -96,7 +96,7 @@ const show = (data) => {
       </header>
       {/* End of Header */}
 
-      
+
       {/* Start of Show container */}
       <main className='place-container'>
         {/* Start of card */}
@@ -132,36 +132,36 @@ const show = (data) => {
 
       </main>
       {/* End of Show container */}
-              {/* Start of comments section */}
-              <section className="comments-section">
-          <h2 className='comments-title'>Comments</h2>
-          <hr />
-          {/* Start of comment content */}
-          <div className="current-comments">
-            {/* Returning variable */}
-            {comments}            
-          </div>
-          {/* End of comment content */}
-          <hr />
-          {/* Start of form section */}
-          <div className="comments-section-form">
-            {/* Form title */}
-            <h2 className='comments-form-title'>Got Your Own Rant or Rave?</h2>
-            {/* Start of form container */}
-            <div className="comment-form-container">
-              {/* Start of form */}
-              <form action={`/places/${data.place.id}/comment`} method="POST">
-                {/* Form group */}
-                <div className="row">
-                  {/* Start of form group */}
-                  <div className="form-group col-sm-12">
-                    <label htmlFor="content">Content</label>
-                    <textarea id="content" name="content" className="form-control"></textarea>
-                  </div>
-                  {/* End of form group */}
+      {/* Start of comments section */}
+      <section className="comments-section">
+        <h2 className='comments-title'>Comments</h2>
+        <hr />
+        {/* Start of comment content */}
+        <div className="current-comments">
+          {/* Returning variable */}
+          {comments}
+        </div>
+        {/* End of comment content */}
+        <hr />
+        {/* Start of form section */}
+        <div className="comments-section-form">
+          {/* Form title */}
+          <h2 className='comments-form-title'>Got Your Own Rant or Rave?</h2>
+          {/* Start of form container */}
+          <div className="comment-form-container">
+            {/* Start of form */}
+            <form action={`/places/${data.place.id}/comment`} method="POST">
+              {/* Form group */}
+              <div className="row">
+                {/* Start of form group */}
+                <div className="form-group col-sm-12">
+                  <label htmlFor="content">Content</label>
+                  <textarea id="content" name="content" className="form-control"></textarea>
                 </div>
-                <div className="row">
-                  {/* Start of form group */}
+                {/* End of form group */}
+              </div>
+              <div className="row">
+                {/* Start of form group */}
                 <div className="form-group col-sm-4">
                   <label htmlFor="author">Author</label>
                   <input id="author" name="author" className="form-control" />
@@ -174,33 +174,33 @@ const show = (data) => {
                 </div>
                 {/* End of form group */}
                 {/* Start of form group */}
-                <div className="form-group col-sm-2"> 
+                <div className="form-group col-sm-2">
                   <label htmlFor="rant">Rant?</label>
                   <input type="checkbox" id="rant" name="rant" className="form-control" />
                 </div>
                 {/* End of form group */}
-                </div>  
-                {/* Form button */}
-                <input type="submit" className="form-btn" value="Add Comment" />
-              </form>
-              {/* End of form */}
-              {/* Start of form buttons */}
-              <div className="place-btn-container">
-                {/* Edit button */}
-                <a className='form-btn' href={`/places/${data.place.id}/edit`}>Edit</a>
-                {/* Delete button */}
-                <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
-                  <button type='submit' className='form-btn'>Delete</button>
-                </form>
               </div>
-              {/* End of form buttons */}
+              {/* Form button */}
+              <input type="submit" className="form-btn" value="Add Comment" />
+            </form>
+            {/* End of form */}
+            {/* Start of form buttons */}
+            <div className="place-btn-container">
+              {/* Edit button */}
+              <a className='form-btn' href={`/places/${data.place.id}/edit`}>Edit</a>
+              {/* Delete button */}
+              <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
+                <button type='submit' className='form-btn'>Delete</button>
+              </form>
             </div>
-            {/* End of form container */}
+            {/* End of form buttons */}
           </div>
-          {/* End of form section */}
-        </section>
-        {/* End of comments section */}
+          {/* End of form container */}
+        </div>
+        {/* End of form section */}
+      </section>
+      {/* End of comments section */}
     </Def>
-  )
-}
+  );
+};
 module.exports = show;

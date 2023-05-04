@@ -2,7 +2,7 @@ const React = require('react');
 // Default Html layout
 const Def = (html) => {
     // Returning Jsx
-    return(
+    return (
         // Start of html layout
         <html lang='en'>
             <head>
@@ -18,7 +18,7 @@ const Def = (html) => {
                 {html.children}
             </body>
         </html>
-    )
-}
+    );
+};
 
 module.exports = Def;
